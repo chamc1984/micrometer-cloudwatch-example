@@ -106,7 +106,7 @@ public class MicrometerCloudwatchExampleApplication {
 
         // io.micrometer.core.instrument.binder.* に定義されているBinderをBindする
         new ClassLoaderMetrics().bindTo(registry);
-        new DiskSpaceMetrics(new File("/Users/takanorihara/")).bindTo(registry);
+        new DiskSpaceMetrics(new File("/usr/local/")).bindTo(registry);
         // TODO: これも取りたい気もするけど、executorServiceってどうやって指定するの？
         // new ExecutorServiceMetrics(executorService, executorServiceName, tags);
         new JvmGcMetrics().bindTo(registry);
